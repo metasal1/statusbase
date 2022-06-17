@@ -51,7 +51,7 @@ This is the [Supabase](https://supabase.com) version of Statusbase!
 2. Add your Supabase's Project URL & Key to `.env`
 3. Setup Edge function prerequisites by following [these steps.](https://supabase.com/docs/guides/functions#prerequisites)
 4. Deploy `health_check` function using script `supabase functions deploy health_check`
-5. Copy and paste this script in the same Supabase's project SQL Editor `https://app.supabase.com/project/<your-project-ref>/sql`
+5. Copy and paste this script in the same Supabase's project SQL Editor `https://app.supabase.com/project/vgjtwylbrktrubegojql/sql`
 
 ```sql
 -- Create table
@@ -102,7 +102,7 @@ select
     from
       http((
         'POST',
-        'https://<your-project-ref>.functions.supabase.co/health_check',
+        'https://vgjtwylbrktrubegojql.functions.supabase.co/health_check',
         ARRAY[http_header('Authorization', 'Bearer <supabase-anon-key>')],
         'application/json',
         '{"hello": "world"}'
