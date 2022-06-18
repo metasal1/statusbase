@@ -22,7 +22,7 @@ const { data: incidents } = await useLazyAsyncData("reports", async () => {
 })
 
 const gridCount = useGridCount()
-useCustomHead("StatusBase Status Page")
+useCustomHead("Milysec Status Page")
 
 const retrieveLogs = (url_id: string) => {
   return logs.value?.filter((i) => i.url_id == url_id)
